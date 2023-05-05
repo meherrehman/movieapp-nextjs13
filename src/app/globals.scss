@@ -1,0 +1,18 @@
+@import "./Styles/header.scss";
+@import "./Styles/herosection.scss";
+@import "./Styles/displayMovies.scss";
+@import "./Styles/movieBox.scss";
+@import "./Styles/movieDetail.scss";
+@import "./Styles/loader.scss";
+@import "./Styles/error.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}

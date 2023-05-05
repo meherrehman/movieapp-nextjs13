@@ -1,0 +1,20 @@
+.movieDetail {
+    .imageContainer {
+        width: 50%;
+        height: 400px;
+        margin: 0px auto;
+    }
+
+    .movieImage {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+    }
+
+    .movieTitle,
+    .movieDescription,
+    .movieCategory {
+        text-align: center;
+        margin: 10px 0px;
+    }
+}
