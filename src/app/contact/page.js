@@ -1,4 +1,5 @@
 "use client"
+import axios from 'axios'
 import React, { useState } from 'react'
 
 const page = () => {
@@ -14,15 +15,15 @@ const page = () => {
                 alert("Please fill all the fields")
             }
             else {
-                const response = await fetch("/api/contact", {
-                    method: "POST",
-                    headers: { "Content_Type": "application/json" },
-                    body: JSON.stringify({
-                        name: name,
-                        email: email,
-                        phone: phone,
-                        message: message
-                    })
+                await axios.post("/api/contact", {
+                    name,
+                    email,
+                    phone,
+                    message
+                }).then((res) => {
+                    alert(res.data.message)
+                }).catch((err) => {
+                    console.log(err)
                 })
             }
         } catch (error) {
